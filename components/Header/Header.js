@@ -39,10 +39,10 @@ export default function Header() {
         <div className={`container ${styles.headerContainer}`}>
           <Link href="/" className={styles.logo}>
             <Image 
-              src="/images/logo.jpeg" 
+              src="/images/logo-01.png" 
               alt="Danielli Geovani Advogados Associados" 
-              width={160} 
-              height={50} 
+              width={240} 
+              height={75} 
               style={{ objectFit: 'contain' }}
               priority
             />
@@ -82,10 +82,10 @@ export default function Header() {
         <div className={styles.drawerHeader}>
           <span className={styles.drawerLogo}>
             <Image 
-              src="/images/logo.jpeg" 
+              src="/images/logo-01.png" 
               alt="Danielli Geovani" 
-              width={120} 
-              height={40} 
+              width={180} 
+              height={56} 
               style={{ objectFit: 'contain' }}
             />
           </span>

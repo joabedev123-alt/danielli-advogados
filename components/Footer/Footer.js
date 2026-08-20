@@ -11,10 +11,10 @@ export default function Footer() {
         <div className={styles.footerCol}>
           <Link href="/" className={styles.footerLogo} style={{ display: 'block', marginBottom: 'var(--space-4)' }}>
             <Image 
-              src="/images/logo.jpeg" 
+              src="/images/logo-01.png" 
               alt="Danielli Geovani Advogados Associados" 
-              width={180} 
-              height={60} 
+              width={260} 
+              height={85} 
               style={{ objectFit: 'contain' }}
             />
           </Link>

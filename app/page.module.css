@@ -28,7 +28,7 @@
 
 @media (min-width: 1024px) {
   .heroImageWrapper {
-    width: 65%;
+    width: 60%;
   }
 }
 
@@ -46,9 +46,10 @@
   position: relative;
   z-index: 2;
   color: var(--color-off-white);
-  max-width: 650px;
+  max-width: 480px;
   padding-top: var(--space-12);
 }
+
 
 .eyebrow {
   display: inline-block;
@@ -62,8 +63,8 @@
 }
 
 .heroTitle {
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-size: 3rem;
+  line-height: 1.15;
   margin-bottom: var(--space-5);
   color: var(--color-off-white);
 }
