@@ -1,0 +1,192 @@
+.heroInterno {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background-color: var(--color-navy-black);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.heroTitle {
+  color: var(--color-off-white);
+  font-size: 3.5rem;
+  margin-top: var(--space-8);
+}
+
+.section {
+  padding: var(--space-16) 0;
+}
+
+.bgIvory {
+  background-color: var(--color-warm-ivory);
+}
+
+.bgOffWhite {
+  background-color: var(--color-off-white);
+}
+
+.historiaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .historiaGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.filosofiaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .filosofiaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .filosofiaGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filosofiaCard {
+  background-color: var(--color-off-white);
+  padding: var(--space-6);
+  border-top: 2px solid var(--color-champagne-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(7, 17, 31, 0.05);
+}
+
+.filosofiaTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-navy-black);
+  margin-bottom: var(--space-3);
+}
+
+.filosofiaText {
+  color: rgba(7, 17, 31, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: var(--space-12) auto 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(198, 164, 106, 0.5);
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+  }
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.timelineContent {
+  padding-left: 60px;
+}
+
+@media (min-width: 768px) {
+  .timelineContent {
+    width: 45%;
+    padding-left: 0;
+  }
+  
+  .timelineItem:nth-child(even) .timelineContent {
+    margin-left: auto;
+    padding-left: 40px;
+  }
+  
+  .timelineItem:nth-child(odd) .timelineContent {
+    text-align: right;
+    padding-right: 40px;
+  }
+}
+
+.timelineDot {
+  position: absolute;
+  left: 14px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-champagne-gold);
+}
+
+@media (min-width: 768px) {
+  .timelineDot {
+    left: calc(50% - 6px);
+  }
+}
+
+.timelineTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-navy-black);
+  margin-bottom: var(--space-2);
+}
+
+.timelineText {
+  color: rgba(7, 17, 31, 0.7);
+  font-size: 0.95rem;
+}
+
+.galeriaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .galeriaGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.galeriaItem {
+  position: relative;
+  height: 300px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}

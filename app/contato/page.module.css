@@ -1,0 +1,9 @@
+.socialLink {
+  color: var(--color-navy-black);
+  font-size: 1.5rem;
+  transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-champagne-gold);
+}
