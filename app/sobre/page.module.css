@@ -26,7 +26,7 @@
 
 .heroTitle {
   color: var(--color-off-white);
-  font-size: 3.5rem;
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
   margin-top: var(--space-8);
 }
 
@@ -52,6 +52,19 @@
 @media (min-width: 1024px) {
   .historiaGrid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.historiaImage {
+  position: relative;
+  height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .historiaImage {
+    height: 500px;
   }
 }
 
@@ -186,7 +199,13 @@
 
 .galeriaItem {
   position: relative;
-  height: 300px;
+  height: 160px;
   border-radius: var(--radius-sm);
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .galeriaItem {
+    height: 300px;
+  }
 }

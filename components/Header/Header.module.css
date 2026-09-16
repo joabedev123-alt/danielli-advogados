@@ -30,6 +30,18 @@
   font-weight: 600;
   color: var(--color-off-white);
   letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 190px;
+  height: auto;
+}
+
+@media (min-width: 480px) {
+  .logo img {
+    width: 240px;
+  }
 }
 
 /* Nav links for desktop */
@@ -124,6 +136,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  max-height: 100dvh;
   background-color: var(--color-deep-navy);
   z-index: var(--z-modal);
   transform: translateX(-100%);
@@ -131,6 +144,7 @@
   display: flex;
   flex-direction: column;
   padding: var(--space-5);
+  overflow-y: auto;
 }
 
 .mobileDrawer.drawerOpen {
@@ -167,7 +181,7 @@
 
 .mobileNavLink {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
   color: var(--color-off-white);
   text-decoration: none;
 }

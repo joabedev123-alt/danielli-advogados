@@ -52,6 +52,15 @@
   --transition-slow: 500ms ease;
 }
 
+@media (max-width: 768px) {
+  :root {
+    /* Menos espaço vazio vertical em ecrãs pequenos */
+    --space-12: 3rem;   /* 48px (era 96px) */
+    --space-16: 4rem;   /* 64px (era 128px) */
+    --space-24: 5rem;   /* 80px (era 192px) */
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -93,6 +102,37 @@ a:hover {
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--space-4);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Grid de cartões (áreas, artigos, contacto) com piso seguro para ecrãs
+   estreitos: evita overflow horizontal em telemóveis muito pequenos. */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+}
+
+@media (max-width: 480px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* Título grande usado nos heróis internos (Áreas, Contacto, Conteúdos, Atuação) */
+.page-hero-title {
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+}
+
+/* Título de secção (h2), reutilizado em várias páginas */
+.section-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 .text-center { text-align: center; }

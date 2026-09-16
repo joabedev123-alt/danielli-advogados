@@ -1,6 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { areas } from '@/data/areas';
+
+const footerLabels = {
+  'migracoes': 'Migrações',
+  'civil-e-familia': 'Civil e Família',
+  'direito-do-trabalho': 'Trabalho',
+  'direito-penal': 'Penal',
+  'direito-comercial': 'Comercial',
+  'registo-e-notariado': 'Registos',
+  'direito-imobiliario': 'Imobiliário',
+};
 
 export default function Footer() {
   return (
@@ -41,12 +52,9 @@ export default function Footer() {
         <div className={styles.footerCol}>
           <h4 className={styles.colTitle}>Áreas</h4>
           <nav className={styles.footerNav}>
-            <Link href="/areas/civil-e-familia">Civil e Família</Link>
-            <Link href="/areas/direito-do-trabalho">Trabalho</Link>
-            <Link href="/areas/direito-penal">Penal</Link>
-            <Link href="/areas/migracoes">Migrações</Link>
-            <Link href="/areas/direito-comercial">Comercial</Link>
-            <Link href="/areas/registo-e-notariado">Registos</Link>
+            {areas.map((area) => (
+              <Link key={area.slug} href={`/areas/${area.slug}`}>{footerLabels[area.slug] || area.title}</Link>
+            ))}
           </nav>
         </div>
 
@@ -78,6 +86,8 @@ export default function Footer() {
         <div className={`container ${styles.bottomContent}`}>
           <p className={styles.copyright}>
             &copy; {new Date().getFullYear()} Danielli Geovani Advogados Associados. Todos os direitos reservados.
+            <br />
+            Produzida com 💚 por <a href="https://camaly.com.br/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>CAMALY</a>
           </p>
           <div className={styles.legalLinks}>
             <Link href="/politica-de-privacidade">Política de Privacidade</Link>

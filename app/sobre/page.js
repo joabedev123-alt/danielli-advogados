@@ -29,7 +29,7 @@ export default function Sobre() {
       <section className={`${styles.section} ${styles.bgOffWhite}`}>
         <div className={`container ${styles.historiaGrid}`}>
           <div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-5)', fontFamily: 'var(--font-serif)' }}>
+            <h2 className="section-title" style={{ marginBottom: 'var(--space-5)', fontFamily: 'var(--font-serif)' }}>
               Trajetória e Dedicação
             </h2>
             <div style={{ width: '60px', height: '2px', backgroundColor: 'var(--color-champagne-gold)', marginBottom: 'var(--space-5)' }}></div>
@@ -40,7 +40,7 @@ export default function Sobre() {
               [Continuar com detalhes sobre a atuação e a visão da profissional para o mercado jurídico e atendimento aos clientes.]
             </p>
           </div>
-          <div style={{ position: 'relative', height: '500px', borderRadius: '4px', overflow: 'hidden' }}>
+          <div className={styles.historiaImage}>
             <Image 
               src="/images/hero.jpg" 
               alt="Retrato Danielli Geovani" 
@@ -56,7 +56,7 @@ export default function Sobre() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: 'var(--space-8)' }}>
             <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-champagne-gold)' }}>Nossos Pilares</span>
-            <h2 style={{ fontSize: '2.5rem', marginTop: 'var(--space-2)', fontFamily: 'var(--font-serif)' }}>Filosofia de Atuação</h2>
+            <h2 className="section-title" style={{ marginTop: 'var(--space-2)', fontFamily: 'var(--font-serif)' }}>Filosofia de Atuação</h2>
           </div>
 
           <div className={styles.filosofiaGrid}>
@@ -84,7 +84,7 @@ export default function Sobre() {
       <section className={`${styles.section} ${styles.bgOffWhite}`}>
         <div className="container">
           <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)' }}>Formação e Experiência</h2>
+            <h2 className="section-title" style={{ fontFamily: 'var(--font-serif)' }}>Formação e Experiência</h2>
           </div>
 
           <div className={styles.timeline}>
@@ -119,7 +119,7 @@ export default function Sobre() {
       {/* Portugal e Brasil */}
       <section className={`${styles.section} ${styles.bgIvory}`}>
         <div className={`container`} style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-4)', fontFamily: 'var(--font-serif)' }}>Portugal e Brasil</h2>
+          <h2 className="section-title" style={{ marginBottom: 'var(--space-4)', fontFamily: 'var(--font-serif)' }}>Portugal e Brasil</h2>
           <p style={{ color: 'rgba(7,17,31,0.8)', fontSize: '1.1rem', lineHeight: '1.8' }}>
             Compreendemos a complexidade de ter a vida dividida entre dois continentes. Nossa atuação é focada na realidade de clientes com interesses, patrimônio e família tanto em Portugal quanto no Brasil, orientando de forma segura em contextos internacionais.
           </p>
@@ -129,7 +129,7 @@ export default function Sobre() {
       {/* Galeria */}
       <section className={`${styles.section} ${styles.bgOffWhite}`}>
         <div className="container">
-          <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>Galeria Profissional</h2>
+          <h2 className="section-title" style={{ fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>Galeria Profissional</h2>
           <div className={styles.galeriaGrid}>
             <div className={styles.galeriaItem}>
               <Image src="/images/portugal.jpg" alt="Galeria 1" fill style={{ objectFit: 'cover' }} />

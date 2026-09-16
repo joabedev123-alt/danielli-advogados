@@ -2,11 +2,18 @@
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 700px;
+  height: 100dvh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: var(--color-navy-black);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 700px;
+  }
 }
 
 .heroBackground {
@@ -121,6 +128,19 @@
   }
 }
 
+.introImage {
+  position: relative;
+  height: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .introImage {
+    height: 600px;
+  }
+}
+
 .introLabel {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -132,7 +152,7 @@
 }
 
 .introTitle {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   margin-bottom: var(--space-5);
 }
 
@@ -163,19 +183,13 @@
 
 .areasGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-6);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 480px) {
   .areasGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .areasGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -188,7 +202,7 @@
 }
 
 .intlTitle {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   margin-bottom: var(--space-5);
   max-width: 800px;
   margin-left: auto;
@@ -218,9 +232,15 @@
 
 .intlImageContainer {
   position: relative;
-  height: 400px;
+  height: 260px;
   border-radius: var(--radius-sm);
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .intlImageContainer {
+    height: 400px;
+  }
 }
 
 .intlConnector {
@@ -307,7 +327,7 @@
 }
 
 .ctaFinalTitle {
-  font-size: 3rem;
+  font-size: clamp(2rem, 7vw, 3rem);
   color: var(--color-off-white);
   margin-bottom: var(--space-5);
 }

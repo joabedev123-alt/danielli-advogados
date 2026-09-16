@@ -33,7 +33,7 @@ export default function AtuacaoExperiencia() {
     <>
       <section style={{ backgroundColor: 'var(--color-navy-black)', padding: 'var(--space-24) 0 var(--space-12)', color: 'var(--color-off-white)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>
+          <h1 className="page-hero-title" style={{ fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>
             Atuação & Experiência
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(250,249,246,0.8)', maxWidth: '700px', margin: '0 auto' }}>

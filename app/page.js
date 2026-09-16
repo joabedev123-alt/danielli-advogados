@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { areas, supportServices } from '@/data/areas';
 
 export default function Home() {
   return (
@@ -56,7 +57,7 @@ export default function Home() {
               Atendimento de pessoas, famílias e empresas em diferentes necessidades jurídicas, preservando a segurança e o rigor técnico que cada contexto exige.
             </p>
           </div>
-          <div style={{ position: 'relative', height: '600px', borderRadius: '4px', overflow: 'hidden' }}>
+          <div className={styles.introImage}>
             <Image 
               src="/images/hero.jpg" 
               alt="Trabalho de advocacia" 
@@ -71,29 +72,42 @@ export default function Home() {
       <section className={styles.areasSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-4)' }}>Áreas de Atuação</h2>
+            <h2 className="section-title" style={{ marginBottom: 'var(--space-4)' }}>Áreas de Atuação</h2>
             <p style={{ color: 'rgba(7, 17, 31, 0.7)', fontSize: '1.1rem' }}>
               Soluções jurídicas desenvolvidas a partir da análise individual de cada situação.
             </p>
           </div>
           
           <div className={styles.areasGrid}>
-            {[
-              { title: 'Direito Civil e Família', desc: 'Arrendamento, condomínios, divórcio, partilhas e testamentos.', href: '/areas/civil-e-familia' },
-              { title: 'Direito do Trabalho', desc: 'Contratos, ações disciplinares, acidentes de trabalho e acompanhamento.', href: '/areas/direito-do-trabalho' },
-              { title: 'Direito Penal', desc: 'Acompanhamento de processos, recursos judiciais e coimas.', href: '/areas/direito-penal' },
-              { title: 'Direito das Migrações', desc: 'Autorização de residência, nacionalidade e vistos.', href: '/areas/migracoes' },
-              { title: 'Comercial e Empresarial', desc: 'Assessoria a empresas, constituição e contratos comerciais.', href: '/areas/direito-comercial' },
-              { title: 'Registo e Notariado', desc: 'Autenticação documental, procurações e registos.', href: '/areas/registo-e-notariado' },
-            ].map((area, index) => (
-              <div key={index} style={{ backgroundColor: 'var(--color-off-white)', padding: 'var(--space-6)', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(7,17,31,0.05)', transition: 'transform 0.3s ease' }} className="areaCard">
+            {areas.map((area) => (
+              <div key={area.slug} style={{ backgroundColor: 'var(--color-off-white)', padding: 'var(--space-6)', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(7,17,31,0.05)', transition: 'transform 0.3s ease', display: 'flex', flexDirection: 'column' }} className="areaCard">
                 <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--space-3)' }}>{area.title}</h3>
-                <p style={{ color: 'rgba(7, 17, 31, 0.7)', marginBottom: 'var(--space-5)', fontSize: '0.95rem' }}>{area.desc}</p>
-                <Link href={area.href} style={{ color: 'var(--color-champagne-gold)', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', fontWeight: '500' }}>
+                <p style={{ color: 'rgba(7, 17, 31, 0.7)', marginBottom: 'var(--space-4)', fontSize: '0.95rem' }}>{area.shortDesc}</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 var(--space-5) 0', flexGrow: 1 }}>
+                  {area.keyServices.map((service, index) => (
+                    <li key={index} style={{ marginBottom: 'var(--space-2)', paddingLeft: 'var(--space-4)', position: 'relative', fontSize: '0.9rem', color: 'rgba(7,17,31,0.75)' }}>
+                      <i className="bi bi-check2" style={{ position: 'absolute', left: 0, color: 'var(--color-champagne-gold)' }}></i>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`/areas/${area.slug}`} style={{ color: 'var(--color-champagne-gold)', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', fontWeight: '500' }}>
                   Saiba mais <i className="bi bi-arrow-right" style={{ marginLeft: '4px' }}></i>
                 </Link>
               </div>
             ))}
+          </div>
+
+          <div style={{ marginTop: 'var(--space-10)', backgroundColor: 'var(--color-navy-black)', borderRadius: 'var(--radius-sm)', padding: 'var(--space-8)' }}>
+            <h3 style={{ fontSize: '1.3rem', fontFamily: 'var(--font-serif)', color: 'var(--color-off-white)', marginBottom: 'var(--space-3)' }}>
+              {supportServices.title}
+            </h3>
+            <p style={{ color: 'rgba(250,249,246,0.75)', fontSize: '0.95rem', marginBottom: 'var(--space-4)', maxWidth: '640px' }}>
+              {supportServices.shortDesc}
+            </p>
+            <Link href={`/areas/${supportServices.slug}`} style={{ color: 'var(--color-champagne-gold)', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', fontWeight: '500' }}>
+              Saiba mais <i className="bi bi-arrow-right" style={{ marginLeft: '4px' }}></i>
+            </Link>
           </div>
         </div>
       </section>
@@ -132,7 +146,7 @@ export default function Home() {
       <section className={styles.processSection}>
         <div className="container">
           <div className={styles.sectionHeader} style={{ textAlign: 'left', margin: '0' }}>
-            <h2 style={{ fontSize: '2.5rem' }}>Clareza em cada etapa.</h2>
+            <h2 className="section-title">Clareza em cada etapa.</h2>
           </div>
           
           <div className={styles.processGrid}>

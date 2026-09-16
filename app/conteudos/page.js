@@ -21,7 +21,7 @@ export default function Conteudos() {
     <>
       <section style={{ backgroundColor: 'var(--color-navy-black)', padding: 'var(--space-24) 0 var(--space-12)', color: 'var(--color-off-white)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>
+          <h1 className="page-hero-title" style={{ fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-4)' }}>
             Conteúdos Jurídicos
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(250,249,246,0.8)', maxWidth: '600px', margin: '0 auto' }}>
@@ -54,7 +54,7 @@ export default function Conteudos() {
 
       <section style={{ padding: 'var(--space-16) 0', backgroundColor: 'var(--color-off-white)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: 'var(--space-8)' }}>
+          <div className="grid-cards">
             {articles.map((article, index) => (
               <article key={index} style={{ backgroundColor: 'var(--color-off-white)', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(7,17,31,0.1)', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ padding: 'var(--space-6)', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>

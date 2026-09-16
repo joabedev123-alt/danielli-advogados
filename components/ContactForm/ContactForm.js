@@ -57,13 +57,14 @@ export default function ContactForm() {
           <label htmlFor="area" className={styles.label}>Área de Interesse</label>
           <select id="area" name="area" className={styles.input} required defaultValue="">
             <option value="" disabled>Selecione uma área</option>
-            <option value="civil">Direito Civil e Família</option>
+            <option value="migracoes">Direito das Migrações e Nacionalidade</option>
+            <option value="civil">Direito Civil, Família e Sucessões</option>
             <option value="trabalho">Direito do Trabalho</option>
-            <option value="penal">Direito Penal</option>
-            <option value="migracoes">Migrações</option>
-            <option value="empresarial">Comercial e Empresarial</option>
-            <option value="registos">Registo e Notariado</option>
-            <option value="documental">Apoio Documental</option>
+            <option value="penal">Direito Penal e Contraordenacional</option>
+            <option value="empresarial">Direito Comercial e Societário</option>
+            <option value="registos">Registos e Notariado</option>
+            <option value="imobiliario">Direito Imobiliário</option>
+            <option value="documental">Diligências e Serviços Jurídico-Administrativos</option>
             <option value="outra">Outro assunto</option>
           </select>
         </div>
